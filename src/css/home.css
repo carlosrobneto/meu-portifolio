@@ -1,11 +1,17 @@
 /* src/css/home.css */
 
+body {
+  overflow-x: hidden; /* Oculta qualquer conteúdo que ultrapasse a largura da tela */
+}
+
 .home-container {
   padding: 50px;
 }
 
 .top-content {
   margin-bottom: 30px; /* Espaço entre o conteúdo superior e a seção de habilidades */
+  display: flex;
+  align-items: center;
 }
 
 .left-content {
@@ -57,6 +63,10 @@
   }
 }
 
+.legenda {
+  color: #55ffe1;
+}
+
 .right-content {
   display: flex;
   justify-content: flex-end;
@@ -91,44 +101,245 @@
   }
 }
 
-.skills {
-  background-color: #1a1a1a; /* Fundo cinza escuro */
-  padding: 20px;
+.Sobre {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #55ffe067, rgba(0, 0, 0, 0));
+  height: 70vh;
   border-radius: 10px;
-  margin-top: 30px; /* Espaço entre a seção de habilidades e o conteúdo superior */
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between; /* Garante que as colunas fiquem lado a lado */
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.cv {
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 10px;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suaviza a transição */
 }
 
-.skills h4 {
-  color: #55ffe1;
+.cv:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
 }
 
-.skills ul {
-  list-style-type: none;
-  padding: 0;
+.card-left {
+  text-align: center;
+  border-color: #55ffe1;
+  border: 1px;
+  border-radius: 15;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap; /* Permite quebra de linha para as skills */
-  justify-content: center; /* Centraliza as skills */
+  align-items: center;
+  flex-direction: column;
+  padding: 0, 0, 0, 0;
+  margin-left: 20px;
+}
+.card-center {
+  text-align: center;
+  border-color: #55ffe1;
+  border: 1px;
+  border-radius: 15;
+  width: 100%;
+  padding: 0, 0, 0, 0;
+}
+.card-rigth {
+  text-align: center;
+  border-color: #55ffe1;
+  border: 1px;
+  border-radius: 15;
+  width: 100%;
+  padding: 0, 0, 0, 0;
 }
 
-.skills ul li {
-  margin: 5px 10px; /* Margem entre as skills */
-  font-size: 18px;
-  width: 30%; /* Permite três skills por linha */
-  text-align: center; /* Centraliza o texto das skills */
+.linha {
+  width: 70%;
+  border-bottom: 2px solid #55ffe1;
 }
 
-.Hard {
-  background-color: #1d1d1d; /* Tom cinza mais escuro para contrastar com o fundo */
-  border-radius: 10px;
-  padding: 10px;
-  margin-right: 10px; /* Espaço entre as colunas */
+.button-legenda {
+  color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 10px;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suaviza a transição */
 }
 
-.Soft {
-  background-color: #1d1d1d; /* Tom cinza mais escuro para contrastar com o fundo */
-  border-radius: 10px;
-  padding: 10px;
-  margin-left: 10px; /* Espaço entre as colunas */
+.button-legenda:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.bord-top-left{
+  border-top-left-radius: 10px;
+}
+.bord-button-left {
+  border-bottom-left-radius: 10px;
+}
+
+.row-skills{
+  width: 100%;
+  display: flex;
+  background-color: #1d283271;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.button-dev-left{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-right: none;
+}
+
+.button-dev-left:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.button-dev-center{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-dev-center:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.button-dev-rigth{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: none;
+}
+
+.button-dev-rigth:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.button-dev-left-titulo{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1d2832;
+  justify-content: center;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-right: none;
+  border-top-left-radius: 15px;
+}
+
+.button-dev-left-titulo:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.button-dev-rigth-titulo{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d2832;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: none;
+  border-top-right-radius: 15px;
+}
+
+.button-dev-rigth-titulo:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+
+.button-dev-left-button{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-right: none;
+  border-bottom-left-radius: 15px;
+}
+
+.button-dev-left-button:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.button-dev-rigth-button{
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border-color: #55ffe1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: none;
+  border-bottom-right-radius: 15px;
+}
+
+.button-dev-rigth-button:hover {
+  color: black;
+  background-color: #55ffe1;
+  box-shadow: 0 0 20px #55ffe1;
+}
+
+.titulo{
+  background-color: #1d2832;
 }

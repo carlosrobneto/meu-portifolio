@@ -16,9 +16,6 @@ const CustomNavbar = ({ toggleTheme, theme }) => {
           <Nav.Link as={Link} to="/about">Sobre Mim</Nav.Link>
           <Nav.Link as={Link} to="/projects">Projetos</Nav.Link>
           <Nav.Link as={Link} to="/contact">Contato</Nav.Link>
-          <Nav.Link onClick={toggleTheme}>
-            {theme === 'dark' ? <BsSun /> : <BsMoon />}
-          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
