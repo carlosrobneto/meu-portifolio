@@ -1,21 +1,134 @@
 /* src/css/home.css */
 
 .home-container {
-    margin-top: 50px;
+  padding: 50px;
+}
+
+.top-content {
+  margin-bottom: 30px; /* Espaço entre o conteúdo superior e a seção de habilidades */
+}
+
+.left-content {
+  padding-left: 15%;
+}
+
+.txt-nome span {
+  position: relative;
+}
+
+.txt-nome span::before {
+  content: "";
+  color: #55ffe1;
+  animation: palavra-nome 20s forwards;
+}
+
+.txt-nome span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid #55ffe1;
+  right: -10px;
+  animation: cursor-nome .8s infinite, digitar-nome 20s steps(15) forwards;
+  background-color: black;
+  width: calc(100% + 13px);
+}
+
+@keyframes digitar-nome {
+  5% {
+      width: 0;
   }
-  
-  .home-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  100% {
+      width: 0%;
   }
-  
-  .home-lead {
-    font-size: 1.25rem;
-    margin-bottom: 30px;
+}
+
+@keyframes cursor-nome {
+  0% {
+      border-left: 2px solid black;
   }
-  
-  .home-button {
-    padding: 10px 20px;
-    font-size: 1.25rem;
+}
+
+@keyframes palavra-nome {
+  0%, 20% {
+      content: "Neto Hoffmann";
   }
-  
+  100% {
+    content: "Neto Hoffmann";
+  }
+}
+
+.right-content {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15%;
+}
+
+.eu-img {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #55ffe1;
+  animation: slideIn 1s ease-out forwards, float 5s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(10px);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.skills {
+  background-color: #1a1a1a; /* Fundo cinza escuro */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px; /* Espaço entre a seção de habilidades e o conteúdo superior */
+  display: flex;
+  justify-content: space-between; /* Garante que as colunas fiquem lado a lado */
+}
+
+.skills h4 {
+  color: #55ffe1;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha para as skills */
+  justify-content: center; /* Centraliza as skills */
+}
+
+.skills ul li {
+  margin: 5px 10px; /* Margem entre as skills */
+  font-size: 18px;
+  width: 30%; /* Permite três skills por linha */
+  text-align: center; /* Centraliza o texto das skills */
+}
+
+.Hard {
+  background-color: #1d1d1d; /* Tom cinza mais escuro para contrastar com o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px; /* Espaço entre as colunas */
+}
+
+.Soft {
+  background-color: #1d1d1d; /* Tom cinza mais escuro para contrastar com o fundo */
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10px; /* Espaço entre as colunas */
+}

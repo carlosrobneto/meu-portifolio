@@ -13,20 +13,20 @@ body {
 
 /* Tema Escuro */
 body.dark {
-  background-color: #121212;
+  background-color: #000000;
   color: #ffffff;
 }
 
 body.dark .navbar {
-  background-color: #1f1f1f;
+  background-color: #00000000;
 }
 
 body.dark .footer {
-  background-color: #1f1f1f;
+  background-color: #000000;
 }
 
 body.dark .btn-toggle-theme {
-  background-color: #333;
+  background-color: #000000;
   color: #ffffff;
   border: none;
   padding: 10px 20px;

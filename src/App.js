@@ -7,6 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import './css/app.css';
+import BackGround from './components/Background'
 
 const App = () => {
   const [theme, setTheme] = useState('dark');
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <BackGround />
       <Footer />
     </Router>
   );
