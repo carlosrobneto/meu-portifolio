@@ -1,0 +1,21 @@
+/* src/css/home.css */
+
+.home-container {
+    margin-top: 50px;
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .home-lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .home-button {
+    padding: 10px 20px;
+    font-size: 1.25rem;
+  }
+  

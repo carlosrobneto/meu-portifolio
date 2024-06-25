@@ -1,0 +1,12 @@
+/* src/css/footer.css */
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
