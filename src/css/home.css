@@ -135,9 +135,6 @@ body {
   border: 1px;
   border-radius: 15;
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   padding: 0, 0, 0, 0;
   margin-left: 20px;
 }
@@ -342,4 +339,129 @@ body {
 
 .titulo{
   background-color: #1d2832;
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+.popup {
+  visibility: hidden;
+  width: 200px; /* Largura do pop-up */
+  background-color: #000000d5;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Posição acima do botão */
+  left: 50%;
+  margin-left: -100px; /* Metade da largura do pop-up para centralizá-lo */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Embaixo do pop-up */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.button-wrapper:hover .popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+.projects-section {
+  padding: 50px;
+}
+
+.projects-buttons {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.project-button {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background: none;
+  border-color: #55ffe1;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.b-p-direita{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.b-p-esquerda{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.project-button.active {
+  background-color: black;
+}
+
+.projects-list {
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.project {
+  margin: 10px;
+  width: 300px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project-text {
+  text-align: center;
+}
+
+.project-text p {
+  margin-bottom: 10px;
+}
+
+.saiba-mais {
+  background-color: #55ffe1;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.saiba-mais:hover {
+  background-color: black;
+  color: white;
 }
